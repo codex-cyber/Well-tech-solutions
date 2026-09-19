@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Well Technical Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      :root {
+        --bg-main: #0b1220;
+        --bg-section: #111827;
+        --card-bg: #1f2937;
+        --accent: #14b8a6;
+        --accent-hover: #0d9488;
+        --text-main: #f9fafb;
+        --text-muted: #9ca3af;
+      }
+
+      body {
+        background-color: var(--bg-main);
+        color: var(--text-main);
+      }
+
+      section {
+        margin: 0;
+        padding: 3rem 0;
+      }
+
+      h1, h5 {
+        color: var(--text-main);
+        margin-bottom: 0.75rem;
+        font-weight: 600;
+      }
+
+      p {
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: transparent !important;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+      }
+
+      .navbar-brand {
+        color: var(--accent) !important;
+        font-weight: 600;
+      }
+
+      .nav-link {
+        color: var(--text-muted) !important;
+      }
+
+      .nav-link:hover {
+        color: var(--text-main) !important;
+      }
+
+      /* Button */
+      .btn-custom {
+        background-color: var(--accent);
+        color: white;
+        border: none;
+        border-radius: 999px;
+        padding: 0.6rem 1.5rem;
+        transition: all 0.2s ease;
+      }
+
+      .btn-custom:hover {
+        background-color: var(--accent-hover);
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      /* Cards */
+      .card {
+        background-color: var(--card-bg);
+        border: 1px solid rgba(255,255,255,0.05);
+        border-radius: 14px;
+        padding: 1.5rem;
+        transition: all 0.25s ease;
+        height: 100%;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(20,184,166,0.3);
+      }
+
+      /* Alternate sections */
+      .section-alt {
+        background-color: var(--bg-section);
+      }
+
+      /* Fix spacing */
+      .container {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+      }
+
+      .counter {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      .counter + p {
+        color: var(--text-muted);
+        margin-top: 0.5rem;
+      }
+
+      /* Form controls styling */
+      .form-control, .form-select {
+        background-color: var(--card-bg);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--text-main);
+      }
+
+      .form-control:focus, .form-select:focus {
+        background-color: var(--card-bg);
+        border-color: var(--accent);
+        color: var(--text-main);
+        box-shadow: 0 0 0 0.25rem rgba(20, 184, 166, 0.25);
+      }
+
+      .form-control::placeholder {
+        color: var(--text-muted);
+      }
+
+      .modal-content {
+        background-color: var(--card-bg);
+        color: var(--text-main);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      footer {
+        background-color: #070c16;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 3rem 0 1.5rem 0;
+      }
+
+      footer a {
+        color: var(--text-muted);
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        color: var(--accent);
+      }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Well Technical Solutions</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#problems">Problems</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#estimator">Estimator</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <form class="d-flex" role="search" onsubmit="event.preventDefault();">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-custom" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section>
+  <div class="container text-center px-4">
+    <h1 class="display-4 fw-bold mb-3">Experts In Petroleum Engineering</h1>
+    <p class="lead mb-4 mx-auto" style="max-width: 700px;">
+      Innovative solutions for well activation, production enhancement, and artificial lift optimization
+    </p>
+    <a href="#services" class="btn btn-custom btn-lg">Discover Our Services</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section-alt">
+  <div class="container px-4">
+    <h1>About Us</h1>
+    <p>
+      Global Energy Solutions is a leading consulting firm specializing in petroleum and gas engineering...
+    </p>
+    <p>
+      We are committed to helping our clients maximize the value of their assets...
+    </p>
+  </div>
+</section>
+
+<!-- COUNTERS -->
+<section class="section-alt">
+  <div class="container text-center">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h1 class="counter" data-target="15">25</h1>
+        <p>Years of Experience</p>
+      </div>
+      <div class="col-md-4">
+        <h1 class="counter" data-target="120">0</h1>
+        <p>Wells Designed</p>
+      </div>
+      <div class="col-md-4">
+        <h1 class="counter" data-target="50">0</h1>
+        <p>Projects Completed</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMS WE SOLVE -->
+<section id="problems">
+  <div class="container">
+    <h1 class="text-center mb-5">Problems we solve</h1>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card">
+          <h5>Underperforming Wells</h5>
+          <p>
+            Wells not reaching expected output due to pressure loss, flow restrictions, or poor lift design.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card">
+          <h5>High Operating Costs</h5>
+          <p>
+            Inefficient systems and poor optimization leading to unnecessary expenditure.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card">
+          <h5>Declining Production</h5>
+          <p>
+            Mature wells experiencing reduced output and requiring intervention strategies.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card">
+          <h5>Complex Reservoir Behavior</h5>
+          <p>
+            Difficulty predicting performance and planning long-term recovery strategies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container px-4">
+    <h1 class="text-center mb-5">Our Services</h1>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card d-flex flex-column justify-content-between">
+          <div>
+            <h5>Reservoir Engineering</h5>
+            <p>Resource evaluation, reservoir modeling, performance simulation...</p>
+          </div>
+          <button class="btn btn-custom btn-sm mt-3" onclick="showModal('Reservoir Engineering', 'Detailed evaluation of hydrocarbon reserves, thermal & fluid flow simulation, nodal analysis, and dynamic 3D reservoir modeling.')">Details</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card d-flex flex-column justify-content-between">
+          <div>
+            <h5>Drilling Optimization</h5>
+            <p>Well design, trajectory optimization, and equipment planning...</p>
+          </div>
+          <button class="btn btn-custom btn-sm mt-3" onclick="showModal('Drilling Optimization', 'Custom directional well path calculations, casing design, hydraulics calculation, and non-productive time (NPT) reduction.')">Details</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card d-flex flex-column justify-content-between">
+          <div>
+            <h5>Production Enhancement</h5>
+            <p>Production analysis, well problem diagnosis, and optimization...</p>
+          </div>
+          <button class="btn btn-custom btn-sm mt-3" onclick="showModal('Production Enhancement', 'Comprehensive artificial lift optimization (ESP, Gas Lift, Rod Pump), flow assurance diagnosis, and matrix stimulation design.')">Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTION OPTIMIZATION ESTIMATOR -->
+<section id="estimator" class="section-alt">
+  <div class="container px-4">
+    <h1 class="text-center mb-3">Production Optimization Estimator</h1>
+    <p class="text-center mb-5">Estimate potential annual revenue uplift through lift optimization and stimulation.</p>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <label for="calcBopd" class="form-label fw-bold text-light">
+                <i class="fa-solid fa-oil-well text-teal me-1"></i> Current Oil Rate (BOPD)
+              </label>
+              <input type="number" id="calcBopd" class="form-control" value="200" oninput="runEstimator()">
+              <div class="form-text text-muted">Barrels of oil produced per day before optimization.</div>
+            </div>
+            
+            <div class="col-md-6">
+              <label for="calcPrice" class="form-label fw-bold text-light">
+                <i class="fa-solid fa-dollar-sign text-teal me-1"></i> Oil Price ($ / Barrel)
+              </label>
+              <input type="number" id="calcPrice" class="form-control" value="75" oninput="runEstimator()">
+              <div class="form-text text-muted">Benchmark oil price per barrel in USD.</div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="calcOpDays" class="form-label fw-bold text-light">
+                <i class="fa-solid fa-calendar-days text-teal me-1"></i> Operating Days per Year
+              </label>
+              <input type="number" id="calcOpDays" class="form-control" value="350" min="1" max="365" oninput="runEstimator()">
+              <div class="form-text text-muted">Expected active operational days (excluding downtime).</div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="calcLiftType" class="form-label fw-bold text-light">
+                <i class="fa-solid fa-gears text-teal me-1"></i> Artificial Lift Method
+              </label>
+              <select id="calcLiftType" class="form-select" onchange="runEstimator()">
+                <option value="1.0" selected>Gas Lift Optimization</option>
+                <option value="1.15">ESP (Electrical Submersible Pump)</option>
+                <option value="0.9">Rod Pump System</option>
+                <option value="1.05">PCP (Progressive Cavity Pump)</option>
+              </select>
+              <div class="form-text text-muted">Primary artificial lift technology utilized.</div>
+            </div>
+
+            <div class="col-md-12">
+              <label for="calcImprovement" class="form-label fw-bold text-light d-flex justify-content-between">
+                <span><i class="fa-solid fa-chart-line text-teal me-1"></i> Expected Lift Efficiency Improvement (%)</span>
+                <strong id="improvementVal" style="color: var(--accent);">20%</strong>
+              </label>
+              <input type="range" id="calcImprovement" class="form-range" min="5" max="50" step="5" value="20" oninput="runEstimator()">
+              <div class="d-flex justify-content-between"><small class="text-muted">5% Minimal</small><small class="text-muted">50% High Recovery</small></div>
+            </div>
+          </div>
+          <hr class="my-4" style="border-color: rgba(255,255,255,0.1)">
+          <div class="row text-center g-3">
+            <div class="col-6">
+              <p class="mb-1 text-muted">Estimated Rate Gain</p>
+              <h2 class="counter mb-0" id="rateGain" style="color: var(--accent);">+40 BOPD</h2>
+            </div>
+            <div class="col-6">
+              <p class="mb-1 text-muted">Annual Revenue Uplift</p>
+              <h2 class="counter mb-0" id="revenueUplift" style="color: var(--accent);">$1,050,000</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALL TO ACTION & CONTACT -->
+<section id="contact" class="section-alt text-center">
+  <div class="container">
+    <h1 class="mb-3">Ready to Optimize Your Wells?</h1>
+    <p class="mb-4">
+      Get in touch with our experts to discuss your project and improve your production performance.
+    </p>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <form class="card text-start" onsubmit="event.preventDefault(); alert('Thank you for contacting Well Technical Solutions!');">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Your name" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="name@company.com" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Message / Well Requirements</label>
+            <textarea class="form-control" rows="3" placeholder="Describe your field or well challenges..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-custom w-100">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container text-center">
+    <p class="mb-2">&copy; 2026 Well Technical Solutions. All rights reserved.</p>
+    <p class="small text-muted mb-0">Petroleum Engineering • Artificial Lift Optimization • Reservoir Management</p>
+  </div>
+</footer>
+
+<!-- SERVICE MODAL -->
+<div class="modal fade" id="serviceModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="serviceModalTitle">Service Details</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="serviceModalBody">
+        Content...
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const counters = document.querySelectorAll('.counter');
+
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      if(!target) return;
+      let count = 0;
+
+      const updateCount = () => {
+        const increment = target / 100;
+
+        if (count < target) {
+          count += increment;
+          counter.innerText = Math.ceil(count);
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+    });
+  };
+
+  // Run when visible (better UX)
+  let started = false;
+
+  window.addEventListener('scroll', () => {
+    const counterEl = document.querySelector('.counter');
+    if (!counterEl) return;
+    const section = counterEl.parentElement.parentElement;
+    const sectionTop = section.getBoundingClientRect().top;
+
+    if (sectionTop < window.innerHeight && !started) {
+      animateCounters();
+      started = true;
+    }
+  });
+
+  function showModal(title, text) {
+    document.getElementById('serviceModalTitle').innerText = title;
+    document.getElementById('serviceModalBody').innerText = text;
+    new bootstrap.Modal(document.getElementById('serviceModal')).show();
+  }
+
+  function runEstimator() {
+    const bopd = parseFloat(document.getElementById('calcBopd').value) || 0;
+    const price = parseFloat(document.getElementById('calcPrice').value) || 0;
+    const opDays = parseFloat(document.getElementById('calcOpDays').value) || 350;
+    const liftFactor = parseFloat(document.getElementById('calcLiftType').value) || 1.0;
+    const improvement = parseFloat(document.getElementById('calcImprovement').value) || 0;
+
+    document.getElementById('improvementVal').innerText = improvement + '%';
+
+    const gain = bopd * (improvement / 100) * liftFactor;
+    const revenue = gain * price * opDays;
+
+    document.getElementById('rateGain').innerText = '+' + Math.round(gain) + ' BOPD';
+    document.getElementById('revenueUplift').innerText = '$' + Math.round(revenue).toLocaleString();
+  }
+</script>
+</body>
+</html>
